@@ -1,0 +1,18 @@
+# everytime new code is pushed, we rebuild and publish the docker image
+
+name: Docker Image CI for GHCR
+
+on:
+  push
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build and Push the Image
+        run: |
+          # same as make file does..
+          docker login --username gedw99 --password ${{ secrets.GH_PAT}} ghcr.io
+          docker build . --tag ghcr.io/gedw99/hello-world:latest
+          docker push ghcr.io/gedw99/hello-world:latest
