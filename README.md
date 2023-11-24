@@ -93,9 +93,18 @@ Dash board is two fold with Real time and Historical.
 - On Dallas Server and stored on S3 Backblaze in Dallas. https://help.backblaze.com/hc/en-us/sections/5022822228379-B2-Cloud-Replication
 - web gui using Iframes with a Frame per phsical topology ( DNS, NATS, etc )
 
+Scanarioes are:
+
+- Modelled as env.mk makefiles to change the setup easily.
+- Injected into Test Clients and Servers wil the other makefiles.
+
 Test data is injected into each container.
 
+- via makefiles.
+
 Binaries are injected into each container.
+
+- via makefiles.
 
 Test Clients are:
 - controlled via Makefile.
