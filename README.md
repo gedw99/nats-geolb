@@ -97,6 +97,20 @@ Test data is injected into each container.
 
 Binaries are injected into each container.
 
+Test Clients are:
+- controlled via Makefile.
+- 1 on Mac to hand test.
+- 1 on Windos to hand test.
+- Many on Client Servers using NATS CLI as the client
+- Many on Client Servers using Browser automation.
+
+Test Serevrs are:
+
+- Controlled via Makefile.
+- Just dockers.
+
+
+
 
 
 
