@@ -1,8 +1,15 @@
 # nats-geolb
 
-Nats Jetstream can provide geo load balancing.
+This repo provides golang tooling around Nats Jetstream tooling.
 
-This repo provide golang tooling to use it and also manage it.
+- geo load balancing.
+- Upgrading of servers and clients.
+- Failure mode detection and remediation
+- Telemtry.
+- Test harness
+- Ops Data collection.
+- Ops Data viusualisation.
+
 
 ## Use case
 
