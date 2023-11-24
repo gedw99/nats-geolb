@@ -2,7 +2,7 @@
 
 This repo provides golang tooling around Nats Jetstream tooling.
 
-- geo load balancing.
+- geo load balancing. https://docs.nats.io/running-a-nats-service/environment#load-balancers
 - Upgrading of servers and clients.
 - Failure mode detection and remediation
 - Telemtry.
