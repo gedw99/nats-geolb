@@ -8,7 +8,11 @@ Calls Makefiles to do its work
 
 - Precondition are git, make, golang
 
-## actions
+## references
+
+https://github.com/actions/starter-workflows
+
+## actions we use
 
 makefiles:
 
