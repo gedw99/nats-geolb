@@ -68,6 +68,37 @@ We can then drive the clients and servers in different ways
 
 We need to collect data and feed it to the HTML Web GUI.
 
+ä Development
+
+Makes files based that lives inside
+
+- Laptop 
+- Github actions
+- Inside docker containers
+
+Deploymnet scanarios atre:
+
+- Modelling in a Deployment folder
+- Github actions per Folder so we can run different scanarios with no github branches using git ops.
+
+Command and control via Single Server in Dallas
+
+- A docker
+- Uses Syndia NGS as command channel to command servers and clients
+- Make file is a step by step runner
+- Telemetry flows through NGS back to Telemetry system on Dallas Server
+
+Dash board is two fold with Real time and Historical.
+
+- On Dallas Server and stored on S3 Backblaze in Dallas. https://help.backblaze.com/hc/en-us/sections/5022822228379-B2-Cloud-Replication
+- web gui using Iframes with a Frame per phsical topology ( DNS, NATS, etc )
+
+Test data is injected into each container.
+
+Binaries are injected into each container.
+
+
+
 
 
 
