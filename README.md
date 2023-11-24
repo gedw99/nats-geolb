@@ -15,24 +15,30 @@ This repo provides golang tooling around Nats Jetstream tooling.
 
 3 data centers ( London, Amsterdam, Dallas ) with 3 Nats Servers in each is a decent setup
 
-Client is nats.go as wasm in a browsr as a serive worker
+Client is nats.go as wasm in a browsr as a serive worker.
 
-Data is html, json and video. Video stremaing over nats using web soc ket works very well.
+User Data is html, json and video. web sockets based.
 
-Servers run Nats Server embedded to make upgrades easier.
+Servers run Nats Server docker.
 
-Load Balancers and Proxies are none. This is the point.
+Load Balancers and Proxies are none. This is the whole point of what NATS Geo Loading balancing advantgaes.
 
-Contaiers are docker.
+Contaiers are docker.  https://docs.nats.io/running-a-nats-service/nats_docker
 
-Hosting is Fly.io, so that we have fast cycling of the servers to simukaet failure modes. NOTE: check is we can turn off the AnyCast aspects of fly.io geo routing to the nearest server and also turn it on. This is a critical aspect to this.
+Hosting is Fly.io. https://fly.io geo routing to the nearest server toggling to be tested
 
-DNS is a standard basic one with no Geo DNS or anythign special. We dont need BGP or anycast is the whole point.
+Hosting is Vultur. https://www.vultr.com geo routing ( any cast ) can be toggles also.
+
+DNS is Google. https://en.wikipedia.org/wiki/Google_Public_DNS does anycast DNS. Needed for NATs Clients intiial connection phase.
+
+DNS is Cloudflare. https://www.cloudflare.com/en-gb/learning/dns/what-is-anycast-dns/ to be tested.
 
 
 ## Operations
 
 Syndia NATS is used as back channel plane to send messages to servers and clients in order to orchestrate everything, whilst servers and clients are in flux. This allows the flexibility and resilence needed.
+
+All the systems listed in the Use case above has APIS that we exploit via the Operations back channel so that we can collect data that match up and compatre use case strategies with real data.
 
 ## Failure modes
 
