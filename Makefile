@@ -50,23 +50,18 @@ env-print:
 ### DEPS
 
 dep-print:
-	$(MAKE) aqua-print
 	$(MAKE) caddy-print
 	$(MAKE) gio-print
 	$(MAKE) go-print
-	$(MAKE) goreman-print
-	#$(MAKE) minio-print
 	$(MAKE) nats-print
-	$(MAKE) weaver-print
+
 
 dep-all:
-	$(MAKE) aqua-dep
 	$(MAKE) caddy-dep
 	$(MAKE) gio-dep
-	$(MAKE) goreman-dep
-	#$(MAKE) minio-dep
+	$(MAKE) go-dep
 	$(MAKE) nats-dep
-	$(MAKE) weaver-dep
+	
 	
 start-goreman:
 	# DONT USE. Its leaking processes.
